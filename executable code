@@ -1,0 +1,86 @@
+#include<iostream>
+#include<string>
+#include<windows.h>
+#include<unistd.h>
+using namespace std;
+int main()
+{
+	string note;
+	int i,t,len;
+	cout<<"Enter the music code\n";
+	getline(cin,note);
+	cout<<"Enter the music tempo\n";
+	cin>>t;
+	t=t*100;
+	len=note.length();
+	cout<<"Enjoy the music\n";
+	for(i=0;i<=len;i++)
+	{
+		sleep(0.3);
+		char ch=note.at(i); 
+		if(ch=='c')
+                 {                
+                 Beep(261.63,t);
+			     }
+                 else if(ch=='d')
+                 {
+                Beep(293.66,t);
+			     }
+                else if(ch=='e')
+                 {
+                Beep(329.63,t);
+			     } 
+                else if(ch=='f')
+                {
+                Beep(349.23,t);
+			    }
+                else if(ch=='g')
+                {
+                Beep(392,t);
+			    }
+                else if(ch=='a')
+                {
+                Beep(440,t);
+			    }
+                else if(ch=='b')
+                {
+                Beep(493.88,t);
+			    }
+			    else if(ch=='v')
+                {
+                Beep(493.88,t);
+			    }
+			    else if(ch=='1')
+                {
+                Beep(277.18,t);
+			    }
+			    else if(ch=='2')
+                {
+                Beep(311.13,t);
+			    }
+			    else if(ch=='3')
+                {
+                Beep(369.99,t);
+			    }
+			     else if(ch=='4')
+                {
+                Beep(415.3,t);
+			    }
+			    else if(ch=='5')
+                {
+                Beep(466.16,t);
+			    }
+			    else if(ch==' ')
+			    {
+			    sleep(1);
+			    }
+			    
+			}
+			return 0;
+		}
+		//copy paste the music code for song:
+	
+	//alippazham=cggggga cggggga afff eddd fefefeg edc :tempo 2
+    //twinkle twinkle little star:ccggaag ffeeddc ggffeed ggffeed tempo:4
+    // bella cia: eabva eabva eabvbvababaee edeff fedfe edvbebva tempo:2
+    // perfect: bag b b b bag b b b bag v v v bag a tempo:3
